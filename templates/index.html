@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca - Pokemon e Digimon</title>
+</head>
+
+<body>
+    <h2>Busca por ID - Pokemon and Digimon</h2>
+    <input type="number" placeholder="Busque por ID (1 a 1008)">
+    <button type="submit">Procurar</button>
+
+    <!-- {% for c in resp %}
+    <tr>
+        <td> {{ c }}</td>
+        <br>
+        <td> {{ resp }}</td> 
+    </tr>
+
+    {% endfor %} -->
+
+    
+<p>Pokemon: {{ resp }} </p>
+<p>Pokemon: {{ resp.Pokemon }} </p>
+<p>PokemonURL: {{ resp.PokeImage }} </p>
+<br>
+
+<p>Digimon: {{ resp.Digimon }} </p>
+<p>DigimonURL: {{ resp.DigiImage }} </p>
+
+</body>
+
+</html>

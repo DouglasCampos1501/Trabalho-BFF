@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import requests
 
 app = Flask(__name__)
@@ -12,7 +12,12 @@ def pokemon():
     jsonDigi = respDigi.json()
     resp = {'Pokemon': jsonPoke['forms'][0].get('name'), 'id': jsonPoke.get('order'), 'PokeImage': jsonPoke['sprites'].get('front_default'), 'Digimon': jsonDigi.get('name'), 'DigiImage' : jsonDigi['images'][0]['href']}
     # resp = {'Pokemon':id,'name': jsonPoke['name'][0].get('forms').get('name')}
-    return resp
+    return render_template('index.html', resp=resp)
+
+
+@app.route('/')
+def say_hello():
+    return render_template('index.html')
 
 
 app.run(debug=True)
