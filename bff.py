@@ -12,7 +12,7 @@ def pokemon():
     jsonDigi = respDigi.json()
     resp = {'Pokemon': jsonPoke['forms'][0].get('name'), 'id': jsonPoke.get('order'), 'PokeImage': jsonPoke['sprites'].get('front_default'), 'Digimon': jsonDigi.get('name'), 'DigiImage' : jsonDigi['images'][0]['href']}
     # resp = {'Pokemon':id,'name': jsonPoke['name'][0].get('forms').get('name')}
-    return render_template('index.html', resp=resp)
+    return render_template('response.html', resp=resp)
 
 
 @app.route('/')
