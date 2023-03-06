@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Modo Aleatório - Pokemon e Digimon</title>
+    <script>
+        function randomChoice() {
+            const find = Math.floor(Math.random() * 1008)
+            const valueChoice = find
+
+            if (valueChoice > 0 && valueChoice < 1009) {
+                let url = `http://127.0.0.1:5000/pokemon?id=${valueChoice}`
+                window.location.href = url;
+            }
+            else {
+                result.innerHTML = `Erro na loteria <br> ( ${valueChoice} ) não é um valor válido `
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="home">
+        <p>Modo aleatório <br><small>(o sistema escolhe um valor)</small></p>
+        <br>
+        <img src="{{ url_for('static', filename='img/roda.png') }}">
+        <br><br>
+        <button onclick="randomChoice()">TENTE A SORTE</button>
+        <p id="result" style="padding-top: 20px;">
+
+        </p>
+
+        <div class="paddTop">
+            <button><a href="http://127.0.0.1:5000/">VOLTAR</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    font-family: 'Poppins';font-size: 22px;
+}
+
+h1, h2, h3, p {
+    color: white;
+}
+
+.home {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    min-width: 100PX;
+}
+
+button {
+    padding: 10px;
+    min-width: 150PX;
+    background-color: cadetblue;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.paddTop {
+    padding-top: 100px;
+    color: white;
+}
+
+img{
+    width: 15rem;
+    background-color: white;
+}

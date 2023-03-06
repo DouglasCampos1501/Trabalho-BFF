@@ -14,6 +14,9 @@ def pokemon():
     # resp = {'Pokemon':id,'name': jsonPoke['name'][0].get('forms').get('name')}
     return render_template('response.html', resp=resp)
 
+@app.route('/aleatorio')
+def aleatorio():
+    return render_template('aleatorio.html')
 
 @app.route('/')
 def say_hello():
